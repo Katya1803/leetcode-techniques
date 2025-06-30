@@ -1,7 +1,5 @@
 package com.leetcode.datastructures.arrays;
 
-import java.util.*;
-
 /**
  * Array manipulation techniques for LeetCode problems
  */
