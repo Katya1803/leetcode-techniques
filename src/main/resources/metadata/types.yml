@@ -1,0 +1,357 @@
+# src/main/resources/metadata/types.yml
+# Comprehensive Type Metadata for LeetCode Problems
+
+types:
+  # ==================== PRIMITIVE TYPES ====================
+
+  int:
+    testCases:
+      - "0"
+      - "1"
+      - "-1"
+      - "10"
+      - "Integer.MAX_VALUE"
+      - "Integer.MIN_VALUE"
+    assertion: "assertEquals"
+
+  long:
+    testCases:
+      - "0L"
+      - "1L"
+      - "-1L"
+      - "Long.MAX_VALUE"
+      - "Long.MIN_VALUE"
+    assertion: "assertEquals"
+
+  double:
+    testCases:
+      - "0.0"
+      - "1.0"
+      - "-1.0"
+      - "3.14159"
+      - "Double.MAX_VALUE"
+    assertion: "assertEquals"
+
+  float:
+    testCases:
+      - "0.0f"
+      - "1.0f"
+      - "-1.0f"
+      - "3.14f"
+    assertion: "assertEquals"
+
+  boolean:
+    testCases:
+      - "true"
+      - "false"
+    assertion: "assertEquals"
+
+  char:
+    testCases:
+      - "'a'"
+      - "'z'"
+      - "'A'"
+      - "'Z'"
+      - "'0'"
+      - "'9'"
+      - "' '"
+    assertion: "assertEquals"
+
+  String:
+    testCases:
+      - "null"
+      - '""'
+      - '"a"'
+      - '"hello"'
+      - '"Hello World"'
+      - '"123"'
+      - '"!@#$%"'
+    assertion: "assertEquals"
+
+  # ==================== ARRAY TYPES ====================
+
+  "int[]":
+    testCases:
+      - "null"
+      - "new int[]{}"
+      - "new int[]{0}"
+      - "new int[]{1}"
+      - "new int[]{1,2,3}"
+      - "new int[]{-1,0,1}"
+      - "new int[]{1,1,1}"
+      - "new int[]{Integer.MAX_VALUE}"
+      - "new int[]{Integer.MIN_VALUE}"
+    assertion: "assertArrayEquals"
+
+  "long[]":
+    testCases:
+      - "null"
+      - "new long[]{}"
+      - "new long[]{1L,2L,3L}"
+    assertion: "assertArrayEquals"
+
+  "double[]":
+    testCases:
+      - "null"
+      - "new double[]{}"
+      - "new double[]{1.0,2.0,3.0}"
+    assertion: "assertArrayEquals"
+
+  "boolean[]":
+    testCases:
+      - "null"
+      - "new boolean[]{}"
+      - "new boolean[]{true}"
+      - "new boolean[]{true,false,true}"
+    assertion: "assertArrayEquals"
+
+  "char[]":
+    testCases:
+      - "null"
+      - "new char[]{}"
+      - "new char[]{'a'}"
+      - "new char[]{'h','e','l','l','o'}"
+    assertion: "assertArrayEquals"
+
+  "String[]":
+    testCases:
+      - "null"
+      - "new String[]{}"
+      - 'new String[]{"a"}'
+      - 'new String[]{"hello","world"}'
+      - 'new String[]{null,"test"}'
+      - 'new String[]{"","non-empty"}'
+    assertion: "assertArrayEquals"
+
+  # ==================== 2D ARRAY TYPES ====================
+
+  "int[][]":
+    testCases:
+      - "null"
+      - "new int[][]{}"
+      - "new int[][]{{1,2},{3,4}}"
+      - "new int[][]{{1},{2,3,4},{5,6}}"
+    assertion: "assertArrayEquals"
+
+  "char[][]":
+    testCases:
+      - "null"
+      - "new char[][]{}"
+      - "new char[][]{{'a','b'},{'c','d'}}"
+    assertion: "assertArrayEquals"
+
+  "String[][]":
+    testCases:
+      - "null"
+      - "new String[][]{}"
+      - 'new String[][]{{"a","b"},{"c","d"}}'
+    assertion: "assertArrayEquals"
+
+  # ==================== COLLECTION TYPES ====================
+
+  "List<Integer>":
+    testCases:
+      - "null"
+      - "new ArrayList<>()"
+      - "Arrays.asList(1)"
+      - "Arrays.asList(1,2,3)"
+      - "Arrays.asList(-1,0,1)"
+      - "Arrays.asList(1,1,1)"
+    assertion: "assertEquals"
+    imports:
+      - "java.util.Arrays"
+      - "java.util.List"
+      - "java.util.ArrayList"
+
+  "List<String>":
+    testCases:
+      - "null"
+      - "new ArrayList<>()"
+      - 'Arrays.asList("a")'
+      - 'Arrays.asList("hello","world")'
+      - 'Arrays.asList("","test",null)'
+    assertion: "assertEquals"
+    imports:
+      - "java.util.Arrays"
+      - "java.util.List"
+      - "java.util.ArrayList"
+
+  "List<Character>":
+    testCases:
+      - "null"
+      - "new ArrayList<>()"
+      - "Arrays.asList('a','b','c')"
+    assertion: "assertEquals"
+    imports:
+      - "java.util.Arrays"
+      - "java.util.List"
+      - "java.util.ArrayList"
+
+  "List<List<Integer>>":
+    testCases:
+      - "null"
+      - "new ArrayList<>()"
+      - "Arrays.asList(Arrays.asList(1,2),Arrays.asList(3,4))"
+    assertion: "assertEquals"
+    imports:
+      - "java.util.Arrays"
+      - "java.util.List"
+      - "java.util.ArrayList"
+
+  "List<List<String>>":
+    testCases:
+      - "null"
+      - "new ArrayList<>()"
+      - 'Arrays.asList(Arrays.asList("a","b"),Arrays.asList("c","d"))'
+    assertion: "assertEquals"
+    imports:
+      - "java.util.Arrays"
+      - "java.util.List"
+      - "java.util.ArrayList"
+
+  "Set<Integer>":
+    testCases:
+      - "null"
+      - "new HashSet<>()"
+      - "new HashSet<>(Arrays.asList(1,2,3))"
+    assertion: "assertEquals"
+    imports:
+      - "java.util.Arrays"
+      - "java.util.Set"
+      - "java.util.HashSet"
+
+  "Map<Integer,Integer>":
+    testCases:
+      - "null"
+      - "new HashMap<>()"
+    assertion: "assertEquals"
+    imports:
+      - "java.util.Map"
+      - "java.util.HashMap"
+
+  "Map<String,Integer>":
+    testCases:
+      - "null"
+      - "new HashMap<>()"
+    assertion: "assertEquals"
+    imports:
+      - "java.util.Map"
+      - "java.util.HashMap"
+
+  # ==================== CUSTOM LEETCODE TYPES ====================
+
+  ListNode:
+    testCases:
+      - "null"
+      - "new ListNode(0)"
+      - "new ListNode(1)"
+      - "ListHelper.createList(1,2,3)"
+      - "ListHelper.createList(1,2,3,4,5)"
+    assertion: "assertTrue"  # Custom comparison needed
+    imports:
+      - "com.leetcode.utils.ListNode"
+      - "com.leetcode.utils.ListHelper"
+
+  TreeNode:
+    testCases:
+      - "null"
+      - "new TreeNode(0)"
+      - "new TreeNode(1)"
+      - "TreeHelper.createTree(1,2,3)"
+      - "TreeHelper.createTree(1,null,2,null,3)"
+    assertion: "assertTrue"  # Custom comparison needed
+    imports:
+      - "com.leetcode.utils.TreeNode"
+      - "com.leetcode.utils.TreeHelper"
+
+  # ==================== SPECIAL LEETCODE TYPES ====================
+
+  Node:  # N-ary Tree Node
+    testCases:
+      - "null"
+      - "new Node(1)"
+    assertion: "assertTrue"
+    imports:
+      - "com.leetcode.utils.Node"
+
+  "Node[]":  # Array of N-ary nodes
+    testCases:
+      - "null"
+      - "new Node[]{}"
+      - "new Node[]{new Node(1), new Node(2)}"
+    assertion: "assertArrayEquals"
+    imports:
+      - "com.leetcode.utils.Node"
+
+  NestedInteger:  # For nested list problems
+    testCases:
+      - "null"
+    assertion: "assertEquals"
+    imports:
+      - "com.leetcode.utils.NestedInteger"
+
+  "List<NestedInteger>":
+    testCases:
+      - "null"
+      - "new ArrayList<>()"
+    assertion: "assertEquals"
+    imports:
+      - "java.util.List"
+      - "java.util.ArrayList"
+      - "com.leetcode.utils.NestedInteger"
+
+  # ==================== NUMERIC WRAPPER TYPES ====================
+
+  Integer:
+    testCases:
+      - "null"
+      - "0"
+      - "1"
+      - "-1"
+      - "Integer.MAX_VALUE"
+      - "Integer.MIN_VALUE"
+    assertion: "assertEquals"
+
+  Long:
+    testCases:
+      - "null"
+      - "0L"
+      - "1L"
+      - "-1L"
+    assertion: "assertEquals"
+
+  Double:
+    testCases:
+      - "null"
+      - "0.0"
+      - "1.0"
+      - "-1.0"
+    assertion: "assertEquals"
+
+  Character:
+    testCases:
+      - "null"
+      - "'a'"
+      - "'A'"
+      - "'0'"
+    assertion: "assertEquals"
+
+  # ==================== ARRAY OF CUSTOM TYPES ====================
+
+  "ListNode[]":
+    testCases:
+      - "null"
+      - "new ListNode[]{}"
+      - "new ListNode[]{new ListNode(1), new ListNode(2)}"
+    assertion: "assertArrayEquals"
+    imports:
+      - "com.leetcode.utils.ListNode"
+
+  "TreeNode[]":
+    testCases:
+      - "null"
+      - "new TreeNode[]{}"
+      - "new TreeNode[]{new TreeNode(1), new TreeNode(2)}"
+    assertion: "assertArrayEquals"
+    imports:
+      - "com.leetcode.utils.TreeNode"

@@ -1,0 +1,23 @@
+problems:
+  # Your problems:
+  - number: 35
+    title: "Search Insert Position"
+    description: "Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order."
+    returnType: "int"
+    parameters:
+      - name: "nums"
+        type: "int[]"
+      - name: "target"
+        type: "int"
+
+
+# ==================== TEMPLATE ====================
+  - number: 99999
+    title: "Problem Title"
+    description: "Problem Description"
+    returnType: "int"
+    parameters:
+      - name: "param1"
+        type: "int[]"
+      - name: "param2"
+        type: "int"

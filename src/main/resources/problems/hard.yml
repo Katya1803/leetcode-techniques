@@ -1,0 +1,13 @@
+problems:
+  # Add your problems here
+
+# ==================== TEMPLATE ====================
+  - number: 99999
+    title: "Problem Title"
+    description: "Problem Description"
+    returnType: "int"
+    parameters:
+      - name: "param1"
+        type: "int[]"
+      - name: "param2"
+        type: "int"
